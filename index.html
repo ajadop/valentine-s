@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9e1e1;
+            color: #d6336c;
+            margin: 0;
+            height: 100vh; /* Tinggi body 100% viewport */
+            display: flex;
+            justify-content: center; /* Pusatkan horizontal */
+            align-items: center; /* Pusatkan vertikal */
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            border: 5px solid #d6336c; /* Border dengan warna pink */
+            border-radius: 15px; /* Sudut border melengkung */
+            background-color: white; /* Latar belakang kontainer */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+        }
+        h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        p {
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: white;
+            background-color: #d6336c;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #b32b5a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Valentine's Day <span id="nama-pacar"></span>!</h1>
+        <h1> <span id="nama-pacar">Farida Aulia Putri</span></h1>
+        <p>You are a great woman💖</p>
+        <button onclick="triggerFireworks()">Klik untuk Kembang Api!</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    <script>
+        function triggerFireworks() {
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+        }
+    </script>
+</body>
+</html>
